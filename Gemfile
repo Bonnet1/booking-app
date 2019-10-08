@@ -4,9 +4,28 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 5.2.2'
+# Add Boostrap for SASS CSS styling
+gem "bootstrap-sass", ">= 3.4.1"
+# Add Rails Controller testing
+gem 'rails-controller-testing'
+# Add BCrypt for password hash functions
+gem 'bcrypt',         '3.1.12'
+# Add carrierwave and mini_magick to handle photo uploads
+gem 'carrierwave',             '1.2.2'
+gem "mini_magick", ">= 4.9.4"
+# Use sqlite3 as the database for Active Record -- Switched out from TOP suggestion
+group :development, :test do
+  gem 'sqlite3'
+end
+# Update Nokogiri to avoid vulnerabilities
+gem "nokogiri", ">= 1.10.4"
+
+
+group :production do
+  # gem 'pg', '~> 0.18.4'
+  gem 'fog', '1.42'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -22,10 +41,15 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Add in JQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Generate fake users to fill out user list
+gem 'faker',          '1.7.3'
+# Add in ability to paginate
+gem 'will_paginate', '3.1.8'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
