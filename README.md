@@ -1,9 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Example booking app to allow trainers to receive client bookings.
 
-Things you may want to cover:
+See:  https://medium.com/@TressaSanders/how-to-build-a-booking-system-with-ruby-on-rails-part-1-d9d57ed94d32
+
+<!-- Things you may want to cover:
 
 * Ruby version
 
@@ -21,4 +22,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
